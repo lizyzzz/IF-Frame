@@ -1,5 +1,5 @@
 # IF-Frame
-Go 语言实现帧同步机制的demo
+Go 语言实现帧同步机制的demo，支持断线重连。
 
 * 视频演示-playdemo.mp4
 <video width="320" height="240" controls>
