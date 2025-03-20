@@ -7,6 +7,7 @@ Go 语言实现帧同步机制的demo
 </video>
 
 * 运行环境: macos, go 1.22  
+![image-figure](./figure.png)
 
 * 运行命令
 ```bash
@@ -31,4 +32,4 @@ A   S   D
 esc: 退出
 ```
 * 代码量  
-![image-webbench](./code.png)
+![image-code](./code.png)
