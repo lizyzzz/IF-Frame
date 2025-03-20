@@ -1,0 +1,9 @@
+package message
+
+const (
+	CONNECTFRAME = iota + 1
+	CONNECTRSPFRAME
+	UPLOADFRAME
+	KEYFRAME
+	QUITFRAME
+)

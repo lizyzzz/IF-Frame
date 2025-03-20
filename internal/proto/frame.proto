@@ -1,0 +1,46 @@
+// protoc --go_out=./ ./frame.proto
+syntax = "proto3";
+
+option go_package = "./";
+
+package proto;
+
+// 客户端上行指令
+message CtrlCmd {
+    int32 client_id = 1;
+    int32 first_id = 2;
+    int32 second_id = 3;
+    string cmd = 4;
+}
+
+message ClientCmd {
+    int32 client_id = 1;
+    repeated CtrlCmd cmds = 2;
+}
+
+// 服务器下发的帧
+message DataFrame {
+    int32 frame_id = 1;
+    repeated ClientCmd client_cmds = 2;
+}
+
+message Position {
+    int32 client_id = 1;
+    int32 x = 2;
+    int32 y = 3;
+}
+
+// 客户端上行首帧
+message ClientFirstFrame {
+    Position position = 1;
+}
+// 服务器下行首帧
+message ServerFirstFrame {
+    int32 frame_id = 1;
+    repeated Position positions = 2;
+}
+
+// 退出游戏帧
+message QuitFrame {
+    int32 client_id = 1;
+}
